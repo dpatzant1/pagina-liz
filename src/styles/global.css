@@ -1,0 +1,1317 @@
+@import "tailwindcss";
+
+/* Reset y configuración base */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+/* Gradiente Animado Aurora Boreal - Efecto Realista */
+.aurora-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(ellipse at bottom, #1e0a3c 0%, #0a0a2e 100%);
+	z-index: 1;
+	overflow: hidden;
+}
+
+/* Capas de Aurora */
+.aurora-bg::before,
+.aurora-bg::after {
+	content: '';
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -50%;
+	left: -50%;
+	opacity: 0.7;
+}
+
+.aurora-bg::before {
+	background: 
+		radial-gradient(ellipse at 20% 50%, rgba(173, 120, 234, 0.6) 0%, transparent 50%),
+		radial-gradient(ellipse at 80% 30%, rgba(144, 213, 255, 0.5) 0%, transparent 50%),
+		radial-gradient(ellipse at 40% 70%, rgba(136, 231, 137, 0.4) 0%, transparent 50%),
+		radial-gradient(ellipse at 60% 20%, rgba(173, 120, 234, 0.5) 0%, transparent 50%);
+	filter: blur(60px);
+	animation: aurora-wave-1 20s ease-in-out infinite;
+}
+
+.aurora-bg::after {
+	background: 
+		radial-gradient(ellipse at 70% 60%, rgba(144, 213, 255, 0.6) 0%, transparent 50%),
+		radial-gradient(ellipse at 30% 40%, rgba(173, 120, 234, 0.5) 0%, transparent 50%),
+		radial-gradient(ellipse at 50% 80%, rgba(136, 231, 137, 0.3) 0%, transparent 50%),
+		radial-gradient(ellipse at 90% 50%, rgba(144, 213, 255, 0.4) 0%, transparent 50%);
+	filter: blur(80px);
+	animation: aurora-wave-2 25s ease-in-out infinite;
+}
+
+@keyframes aurora-wave-1 {
+	0%, 100% {
+		transform: translate(0%, 0%) rotate(0deg) scale(1);
+		opacity: 0.7;
+	}
+	33% {
+		transform: translate(-10%, 10%) rotate(5deg) scale(1.1);
+		opacity: 0.8;
+	}
+	66% {
+		transform: translate(10%, -5%) rotate(-3deg) scale(0.95);
+		opacity: 0.6;
+	}
+}
+
+@keyframes aurora-wave-2 {
+	0%, 100% {
+		transform: translate(0%, 0%) rotate(0deg) scale(1);
+		opacity: 0.6;
+	}
+	25% {
+		transform: translate(8%, -8%) rotate(-4deg) scale(1.05);
+		opacity: 0.7;
+	}
+	50% {
+		transform: translate(-5%, 12%) rotate(6deg) scale(1.1);
+		opacity: 0.8;
+	}
+	75% {
+		transform: translate(12%, 5%) rotate(-2deg) scale(0.9);
+		opacity: 0.65;
+	}
+}
+
+/* ============================================ */
+/* EFECTO DE HUMO MÁGICO - Humo dinámico */
+/* ============================================ */
+
+.magic-smoke {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: radial-gradient(circle, rgba(173, 120, 234, 0.3) 0%, rgba(173, 120, 234, 0.3) 40%, transparent 70%);
+	filter: blur(40px);
+	opacity: 0.85;
+	animation: smoke-float 8s ease-in-out infinite;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.smoke-2 {
+	width: 650px;
+	height: 650px;
+	background: radial-gradient(circle, rgba(144, 213, 255, 0.5) 0%, rgba(144, 213, 255, 0.25) 40%, transparent 70%);
+	filter: blur(45px);
+	opacity: 0.75;
+	animation: smoke-float-2 10s ease-in-out infinite;
+	animation-delay: 2s;
+}
+
+.smoke-3 {
+	width: 550px;
+	height: 550px;
+	background: radial-gradient(circle, rgba(255, 182, 193, 0.45) 0%, rgba(255, 182, 193, 0.2) 40%, transparent 70%);
+	filter: blur(38px);
+	opacity: 0.7;
+	animation: smoke-float-3 12s ease-in-out infinite;
+	animation-delay: 4s;
+}
+
+@keyframes smoke-float {
+	0%, 100% {
+		transform: translate(-50%, -50%) scale(1) rotate(0deg);
+		opacity: 0.85;
+	}
+	25% {
+		transform: translate(-45%, -55%) scale(1.1) rotate(5deg);
+		opacity: 0.95;
+	}
+	50% {
+		transform: translate(-55%, -50%) scale(1.15) rotate(-3deg);
+		opacity: 0.75;
+	}
+	75% {
+		transform: translate(-50%, -45%) scale(1.05) rotate(8deg);
+		opacity: 0.9;
+	}
+}
+
+@keyframes smoke-float-2 {
+	0%, 100% {
+		transform: translate(-50%, -50%) scale(1) rotate(0deg);
+		opacity: 0.75;
+	}
+	33% {
+		transform: translate(-48%, -52%) scale(1.2) rotate(-8deg);
+		opacity: 0.85;
+	}
+	66% {
+		transform: translate(-52%, -48%) scale(0.95) rotate(6deg);
+		opacity: 0.65;
+	}
+}
+
+@keyframes smoke-float-3 {
+	0%, 100% {
+		transform: translate(-50%, -50%) scale(1) rotate(0deg);
+		opacity: 0.7;
+	}
+	40% {
+		transform: translate(-53%, -50%) scale(1.15) rotate(10deg);
+		opacity: 0.8;
+	}
+	80% {
+		transform: translate(-47%, -53%) scale(1.08) rotate(-5deg);
+		opacity: 0.6;
+	}
+}
+
+/* ============================================ */
+/* CORAZONES BRILLANTES - Animación mágica */
+/* ============================================ */
+
+.hearts-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 3;
+	pointer-events: none;
+}
+
+.heart {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	opacity: 0;
+	filter: drop-shadow(0 0 8px rgba(255, 182, 193, 0.8)) drop-shadow(0 0 15px rgba(255, 182, 193, 0.5));
+	animation: heart-float 15s infinite ease-in-out;
+}
+
+.heart-1 {
+	left: 8%;
+	width: 18px;
+	height: 18px;
+	animation-delay: 0s;
+	animation-duration: 14s;
+}
+
+.heart-2 {
+	left: 18%;
+	width: 22px;
+	height: 22px;
+	animation-delay: 2s;
+	animation-duration: 16s;
+}
+
+.heart-3 {
+	left: 30%;
+	width: 16px;
+	height: 16px;
+	animation-delay: 4s;
+	animation-duration: 13s;
+}
+
+.heart-4 {
+	left: 45%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 1s;
+	animation-duration: 15s;
+}
+
+.heart-5 {
+	left: 62%;
+	width: 24px;
+	height: 24px;
+	animation-delay: 3s;
+	animation-duration: 17s;
+}
+
+.heart-6 {
+	left: 75%;
+	width: 18px;
+	height: 18px;
+	animation-delay: 5s;
+	animation-duration: 14s;
+}
+
+.heart-7 {
+	left: 85%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 2.5s;
+	animation-duration: 16s;
+}
+
+.heart-8 {
+	left: 92%;
+	width: 16px;
+	height: 16px;
+	animation-delay: 4.5s;
+	animation-duration: 13s;
+}
+
+@keyframes heart-float {
+	0% {
+		transform: translateY(110vh) scale(0) rotate(0deg);
+		opacity: 0;
+	}
+	5% {
+		opacity: 0.8;
+	}
+	10%, 90% {
+		opacity: 1;
+	}
+	95% {
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateY(-20vh) scale(1.2) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+/* ============================================ */
+/* ESTRELLAS BRILLANTES - Animación mágica */
+/* ============================================ */
+
+.stars-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 3;
+	pointer-events: none;
+}
+
+.star {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	opacity: 0;
+	filter: drop-shadow(0 0 10px rgba(255, 229, 180, 0.9)) drop-shadow(0 0 20px rgba(255, 250, 205, 0.6));
+	animation: star-float 18s infinite ease-in-out;
+}
+
+.star-1 {
+	left: 12%;
+	width: 14px;
+	height: 14px;
+	animation-delay: 0.5s;
+	animation-duration: 16s;
+}
+
+.star-2 {
+	left: 22%;
+	width: 18px;
+	height: 18px;
+	animation-delay: 2.5s;
+	animation-duration: 19s;
+}
+
+.star-3 {
+	left: 35%;
+	width: 12px;
+	height: 12px;
+	animation-delay: 4.5s;
+	animation-duration: 15s;
+}
+
+.star-4 {
+	left: 48%;
+	width: 16px;
+	height: 16px;
+	animation-delay: 1.5s;
+	animation-duration: 17s;
+}
+
+.star-5 {
+	left: 58%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 3.5s;
+	animation-duration: 20s;
+}
+
+.star-6 {
+	left: 68%;
+	width: 14px;
+	height: 14px;
+	animation-delay: 5.5s;
+	animation-duration: 16s;
+}
+
+.star-7 {
+	left: 78%;
+	width: 16px;
+	height: 16px;
+	animation-delay: 2s;
+	animation-duration: 18s;
+}
+
+.star-8 {
+	left: 88%;
+	width: 18px;
+	height: 18px;
+	animation-delay: 4s;
+	animation-duration: 17s;
+}
+
+.star-9 {
+	left: 15%;
+	width: 12px;
+	height: 12px;
+	animation-delay: 6s;
+	animation-duration: 15s;
+}
+
+.star-10 {
+	left: 95%;
+	width: 14px;
+	height: 14px;
+	animation-delay: 1s;
+	animation-duration: 16s;
+}
+
+@keyframes star-float {
+	0% {
+		transform: translateY(110vh) scale(0) rotate(0deg);
+		opacity: 0;
+	}
+	5% {
+		opacity: 0.6;
+	}
+	10% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.9;
+		filter: drop-shadow(0 0 15px rgba(255, 229, 180, 1)) drop-shadow(0 0 25px rgba(255, 250, 205, 0.8));
+	}
+	90% {
+		opacity: 0.7;
+	}
+	95% {
+		opacity: 0.3;
+	}
+	100% {
+		transform: translateY(-20vh) scale(1.5) rotate(720deg);
+		opacity: 0;
+	}
+}
+
+/* Contenido del Hero */
+.hero-content {
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	padding: 2rem;
+	max-width: 900px;
+	animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Título */
+.hero-title {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(2.5rem, 6vw, 5rem);
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 1.5rem;
+	text-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
+	line-height: 1.2;
+	animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+	0%, 100% {
+		text-shadow: 0 4px 20px rgba(255, 182, 193, 0.3),
+		             0 4px 30px rgba(255, 229, 180, 0.2);
+	}
+	50% {
+		text-shadow: 0 4px 30px rgba(255, 182, 193, 0.6),
+		             0 4px 40px rgba(255, 250, 205, 0.4),
+		             0 8px 60px rgba(255, 182, 193, 0.3);
+	}
+}
+
+/* Subtítulo */
+.hero-subtitle {
+	font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+	font-weight: 300;
+	color: #ffffff;
+	margin-bottom: 2.5rem;
+	text-shadow: 0 2px 10px rgba(255, 182, 193, 0.2);
+	line-height: 1.6;
+	opacity: 0.95;
+}
+
+/* Botón */
+.hero-button {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #ffffff;
+	background: rgba(255, 182, 193, 0.2);
+	border: 2px solid rgba(255, 192, 203, 0.4);
+	padding: 1rem 2.5rem;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.4s ease;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 32px rgba(255, 182, 193, 0.2);
+}
+
+.hero-button:hover {
+	background: rgba(255, 182, 193, 0.35);
+	border-color: #FFB6C1;
+	box-shadow: 0 0 30px rgba(255, 182, 193, 0.6),
+	            0 0 50px rgba(255, 250, 205, 0.4),
+	            0 8px 32px rgba(255, 182, 193, 0.3);
+	transform: translateY(-3px);
+}
+
+.hero-button:active {
+	transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.hero-content {
+		padding: 1.5rem;
+	}
+	
+	.hero-title {
+		margin-bottom: 1rem;
+	}
+	
+	.hero-subtitle {
+		margin-bottom: 2rem;
+	}
+	
+	.hero-button {
+		padding: 0.875rem 2rem;
+		font-size: 1.1rem;
+	}
+}
+
+/* ============================================ */
+/* MESSAGES SECTION - Slider de Mensajes */
+/* ============================================ */
+
+.messages-section {
+	position: relative;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #0a0a2e 0%, #1a0b2e 50%, #0f0520 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4rem 2rem;
+	overflow: hidden;
+}
+
+/* Manchas de luz ambiente */
+.ambient-light {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(120px);
+	opacity: 0.3;
+	pointer-events: none;
+	animation: float-ambient 15s ease-in-out infinite;
+}
+
+.light-1 {
+	width: 600px;
+	height: 600px;
+	background: radial-gradient(circle, rgba(173, 120, 234, 0.4) 0%, transparent 70%);
+	top: 10%;
+	left: -10%;
+	animation-delay: 0s;
+}
+
+.light-2 {
+	width: 500px;
+	height: 500px;
+	background: radial-gradient(circle, rgba(144, 213, 255, 0.4) 0%, transparent 70%);
+	bottom: 15%;
+	right: -5%;
+	animation-delay: 3s;
+}
+
+.light-3 {
+	width: 400px;
+	height: 400px;
+	background: radial-gradient(circle, rgba(173, 120, 234, 0.3) 0%, transparent 70%);
+	top: 50%;
+	right: 20%;
+	animation-delay: 6s;
+}
+
+@keyframes float-ambient {
+	0%, 100% {
+		transform: translate(0, 0) scale(1);
+		opacity: 0.3;
+	}
+	50% {
+		transform: translate(30px, -20px) scale(1.1);
+		opacity: 0.4;
+	}
+}
+
+/* Contenedor principal */
+.messages-container {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Título de la sección */
+.section-title {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(2rem, 4vw, 3.5rem);
+	font-weight: 700;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 3rem;
+	text-shadow: 0 4px 20px rgba(136, 231, 137, 0.2);
+}
+
+/* Swiper Container */
+.swiper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.swiper-slide {
+	width: 450px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.swiper-slide-active .message-card {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.swiper-slide:not(.swiper-slide-active) .message-card {
+	transform: scale(0.85);
+	opacity: 0.4;
+}
+
+/* Message Cards - Efecto Glassmorphism */
+.message-card {
+	position: relative;
+	width: 100%;
+	max-width: 450px;
+	height: 550px;
+	padding: 3rem 2.5rem;
+	background: linear-gradient(
+		135deg,
+		rgba(173, 120, 234, 0.35) 0%,
+		rgba(144, 213, 255, 0.35) 100%
+	);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 30px;
+	box-shadow: 
+		0 8px 32px rgba(0, 0, 0, 0.4),
+		0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+		inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: all 0.4s ease;
+}
+
+.message-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 30px;
+	background: linear-gradient(
+		135deg,
+		rgba(173, 120, 234, 0.15) 0%,
+		rgba(144, 213, 255, 0.15) 100%
+	);
+	z-index: -1;
+}
+
+/* Título de la card */
+.card-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 1.5rem;
+	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto de la card */
+.card-text {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.9);
+	line-height: 1.8;
+	text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Paginación de Swiper - Estilo personalizado */
+.swiper-pagination {
+	bottom: 20px !important;
+}
+
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background: rgba(255, 255, 255, 0.3);
+	opacity: 1;
+	transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+	background: #88E789;
+	box-shadow: 0 0 20px rgba(136, 231, 137, 0.8);
+	width: 30px;
+	border-radius: 6px;
+}
+
+/* Corazones y estrellas para Messages Section */
+.messages-hearts,
+.messages-stars {
+	z-index: 1;
+}
+
+/* Responsive para Messages Section */
+@media (max-width: 768px) {
+	.messages-section {
+		padding: 3rem 0.5rem;
+	}
+	
+	.section-title {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+	}
+	
+	.swiper {
+		max-width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.swiper-slide {
+		width: 85vw;
+		max-width: 350px;
+	}
+	
+	.message-card {
+		height: 480px;
+		padding: 2.5rem 2rem;
+		max-width: 100%;
+	}
+	
+	.card-title {
+		font-size: 1.6rem;
+		margin-bottom: 1.2rem;
+	}
+	
+	.card-text {
+		font-size: 1rem;
+		line-height: 1.7;
+	}
+	
+	.ambient-light {
+		opacity: 0.2;
+	}
+	
+	.swiper-slide:not(.swiper-slide-active) .message-card {
+		transform: scale(0.8);
+		opacity: 0.3;
+	}
+}
+
+@media (max-width: 480px) {
+	.swiper-slide {
+		width: 90vw;
+		max-width: 320px;
+	}
+	
+	.message-card {
+		height: 450px;
+		padding: 2rem 1.5rem;
+	}
+	
+	.card-title {
+		font-size: 1.4rem;
+	}
+	
+	.card-text {
+		font-size: 0.95rem;
+	}
+}
+
+/* ============================================ */
+/* LETTER SECTION - Sección de la Carta */
+/* ============================================ */
+
+.letter-section {
+	position: relative;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #1a0b2e 0%, #2d1b3d 50%, #1a0b2e 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4rem 2rem;
+	overflow: hidden;
+}
+
+/* Corazones y estrellas para Letter Section */
+.letter-hearts,
+.letter-stars {
+	z-index: 1;
+}
+
+.letter-container {
+	position: relative;
+	width: 100%;
+	max-width: 900px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 5;
+}
+
+/* Tarjeta de papel de la carta */
+.letter-paper-card {
+	position: relative;
+	width: 100%;
+	background: linear-gradient(135deg, #FFF9F0 0%, #FFF5E6 100%);
+	border-radius: 20px;
+	padding: 3rem 2.5rem;
+	box-shadow: 
+		0 20px 60px rgba(0, 0, 0, 0.5),
+		0 0 0 1px rgba(173, 120, 234, 0.3),
+		inset 0 1px 0 rgba(255, 255, 255, 0.8);
+	overflow: hidden;
+}
+
+.letter-paper-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: 
+		repeating-linear-gradient(
+			0deg,
+			transparent,
+			transparent 30px,
+			rgba(173, 120, 234, 0.03) 30px,
+			rgba(173, 120, 234, 0.03) 31px
+		);
+	pointer-events: none;
+}
+
+/* Corazones decorativos en las esquinas */
+.letter-decorative-heart {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	opacity: 0.15;
+	z-index: 1;
+}
+
+.letter-heart-top-left {
+	top: -10px;
+	left: -10px;
+	transform: rotate(-15deg);
+}
+
+.letter-heart-bottom-right {
+	bottom: -10px;
+	right: -10px;
+	transform: rotate(15deg);
+}
+
+/* Contenido de la carta */
+.letter-content {
+	font-family: 'Poppins', sans-serif;
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.letter-title {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(2.5rem, 5vw, 4rem);
+	color: #AD78EA;
+	margin-bottom: 2rem;
+	text-align: center;
+	text-shadow: 0 2px 8px rgba(173, 120, 234, 0.2);
+	font-style: italic;
+}
+
+.letter-text {
+	font-size: clamp(1rem, 2vw, 1.15rem);
+	color: #2d1b3d;
+	line-height: 2;
+	margin-bottom: 1.8rem;
+	text-align: justify;
+	text-indent: 2rem;
+	font-weight: 400;
+}
+
+.letter-text:first-of-type::first-letter {
+	font-size: 3.5rem;
+	font-family: 'Playfair Display', serif;
+	color: #AD78EA;
+	float: left;
+	line-height: 0.8;
+	margin: 0.1rem 0.5rem 0 0;
+	font-weight: 700;
+}
+
+.letter-signature {
+	text-align: right;
+	font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+	color: #2d1b3d;
+	margin-top: 2.5rem;
+	margin-bottom: 0;
+	font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.3em;
+}
+
+.signature-heart {
+	filter: drop-shadow(0 2px 8px rgba(173, 120, 234, 0.4));
+	animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+/* Efecto de aparición progresiva */
+.fade-line {
+	opacity: 0;
+	transform: translateY(-20px);
+	transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-line.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Responsive para Letter Section */
+@media (max-width: 768px) {
+	.letter-section {
+		padding: 3rem 1.5rem;
+	}
+	
+	.letter-container {
+		max-width: 95%;
+	}
+	
+	.letter-paper-card {
+		padding: 2.5rem 2rem;
+	}
+	
+	.letter-title {
+		margin-bottom: 1.5rem;
+	}
+	
+	.letter-text {
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+		text-indent: 1.5rem;
+	}
+	
+	.letter-decorative-heart {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+@media (max-width: 480px) {
+	.letter-section {
+		padding: 2rem 1rem;
+	}
+	
+	.letter-paper-card {
+		padding: 2rem 1.5rem;
+	}
+	
+	.letter-title {
+		margin-bottom: 1rem;
+	}
+	
+	.letter-text {
+		line-height: 1.7;
+		margin-bottom: 1.2rem;
+		text-indent: 1rem;
+	}
+	
+	.letter-decorative-heart {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+/* ============================================ */
+/* MUSIC SECTION - Reproductor de Música */
+/* ============================================ */
+
+.music-section {
+	position: relative;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #0a0a2e 0%, #1a0b2e 100%);
+	padding: 4rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.music-container {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.music-title {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(2rem, 4vw, 3rem);
+	font-weight: 700;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 3rem;
+	text-shadow: 0 4px 20px rgba(136, 231, 137, 0.2);
+}
+
+/* Player Wrapper */
+.player-wrapper {
+	background: linear-gradient(135deg, rgba(173, 120, 234, 0.15) 0%, rgba(144, 213, 255, 0.15) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 30px;
+	padding: 2.5rem;
+	backdrop-filter: blur(20px);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Album Cover */
+.album-cover {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+.cover-image {
+	width: 280px;
+	height: 280px;
+	border-radius: 20px;
+	box-shadow: 0 10px 40px rgba(173, 120, 234, 0.5);
+	object-fit: cover;
+}
+
+/* Song Info */
+.song-info {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.song-title {
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(1.8rem, 3vw, 2.5rem);
+	font-weight: 700;
+	color: #88E789;
+	margin-bottom: 0.5rem;
+	text-shadow: 0 2px 15px rgba(136, 231, 137, 0.4);
+}
+
+.song-artist {
+	font-family: 'Poppins', sans-serif;
+	font-size: clamp(1rem, 2vw, 1.3rem);
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.8);
+	font-style: italic;
+}
+
+/* Corazones y estrellas de la sección de música */
+.music-hearts,
+.music-stars {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.music-hearts .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.music-hearts .heart:nth-child(2) { left: 30%; animation-delay: 3s; }
+.music-hearts .heart:nth-child(3) { left: 50%; animation-delay: 1.5s; }
+.music-hearts .heart:nth-child(4) { left: 70%; animation-delay: 4s; }
+.music-hearts .heart:nth-child(5) { left: 85%; animation-delay: 2s; }
+
+.music-stars .star:nth-child(1) { left: 15%; animation-delay: 1s; }
+.music-stars .star:nth-child(2) { left: 40%; animation-delay: 3.5s; }
+.music-stars .star:nth-child(3) { left: 60%; animation-delay: 0.5s; }
+.music-stars .star:nth-child(4) { left: 80%; animation-delay: 2.5s; }
+.music-stars .star:nth-child(5) { left: 90%; animation-delay: 4.5s; }
+
+.music-container {
+	position: relative;
+	z-index: 2;
+}
+
+/* Player Controls */
+.player-controls {
+	margin-bottom: 2rem;
+}
+
+.play-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1.5rem;
+	width: 70px;
+	height: 70px;
+	background: #88E789;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 5px 20px rgba(136, 231, 137, 0.4);
+	color: #ffffff;
+}
+
+.play-button:hover {
+	transform: scale(1.1);
+	box-shadow: 0 8px 30px rgba(136, 231, 137, 0.6);
+}
+
+.play-button.playing {
+	background: #AD78EA;
+	box-shadow: 0 5px 20px rgba(173, 120, 234, 0.4);
+}
+
+.play-icon,
+.pause-icon {
+	width: 30px;
+	height: 30px;
+}
+
+/* Progress Bar */
+.progress-container {
+	width: 100%;
+}
+
+.time-display {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.9rem;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.progress-bar {
+	width: 100%;
+	height: 8px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.progress-fill {
+	height: 100%;
+	background: linear-gradient(90deg, #88E789 0%, #90D5FF 100%);
+	width: 0%;
+	transition: width 0.1s linear;
+	border-radius: 10px;
+}
+
+/* Lyrics Container */
+.lyrics-container {
+	max-height: 400px;
+	overflow-y: auto;
+	padding: 1.5rem;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
+	margin-top: 2rem;
+}
+
+.lyrics-container::-webkit-scrollbar {
+	display: none;
+}
+
+.lyrics-container {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Lyric Lines */
+.lyric-line {
+	margin-bottom: 2rem;
+	padding: 1rem;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+.lyric-line:hover {
+	opacity: 0.7;
+	background: rgba(144, 213, 255, 0.1);
+	transform: translateX(5px);
+}
+
+.lyric-line.active {
+	opacity: 1;
+	background: rgba(136, 231, 137, 0.1);
+	transform: scale(1.05);
+}
+
+.lyric-en {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: #ffffff;
+	margin-bottom: 0.3rem;
+	line-height: 1.6;
+}
+
+.lyric-es {
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.95rem;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.7);
+	font-style: italic;
+	line-height: 1.5;
+}
+
+/* Responsive para Music Section */
+@media (max-width: 768px) {
+	.music-section {
+		padding: 3rem 1rem;
+	}
+	
+	.music-title {
+		margin-bottom: 2rem;
+	}
+	
+	.player-wrapper {
+		padding: 2rem 1.5rem;
+	}
+	
+	.cover-image {
+		width: 220px;
+		height: 220px;
+	}
+	
+	.song-info {
+		margin-bottom: 1.5rem;
+	}
+	
+	.song-title {
+		margin-bottom: 0.3rem;
+	}
+	
+	.lyrics-container {
+		max-height: 300px;
+		padding: 1rem;
+	}
+	
+	.lyric-en {
+		font-size: 1rem;
+	}
+	
+	.lyric-es {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.player-wrapper {
+		padding: 1.5rem 1rem;
+	}
+	
+	.cover-image {
+		width: 180px;
+		height: 180px;
+	}
+	
+	.song-info {
+		margin-bottom: 1rem;
+	}
+	
+	.play-button {
+		width: 60px;
+		height: 60px;
+	}
+	
+	.play-icon,
+	.pause-icon {
+		width: 25px;
+		height: 25px;
+	}
+}

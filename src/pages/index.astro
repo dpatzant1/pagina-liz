@@ -1,0 +1,619 @@
+---
+import '../styles/global.css';
+import { entombedLyrics } from '../data/lyrics.js';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<title>Para ti, mi amor ❤️</title>
+	</head>
+	<body>
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="aurora-bg"></div>
+			
+			<!-- Efecto de humo mágico -->
+			<div class="magic-smoke"></div>
+			<div class="magic-smoke smoke-2"></div>
+			<div class="magic-smoke smoke-3"></div>
+			
+			<!-- Corazones brillantes flotantes -->
+			<div class="hearts-container">
+				<svg class="heart heart-1" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-2" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-3" viewBox="0 0 24 24" fill="#FFC0CB">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-4" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-5" viewBox="0 0 24 24" fill="#FFAEC9">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-6" viewBox="0 0 24 24" fill="#FFC0CB">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-7" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-8" viewBox="0 0 24 24" fill="#FFAEC9">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+			</div>
+			
+			<!-- Estrellas brillantes flotantes -->
+			<div class="stars-container">
+				<svg class="star star-1" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-2" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-3" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-4" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-5" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-6" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-7" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-8" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-9" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-10" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+			</div>
+
+			<div class="hero-content">
+				<h1 class="hero-title">Feliz San Valentín, amor de mi vida.</h1>
+				<p class="hero-subtitle">He creado este pequeño rincón en internet solo para ti.</p>
+				<button class="hero-button" onclick="document.querySelector('.messages-section').scrollIntoView({behavior: 'smooth'})">Descubrir ↓</button>
+			</div>
+		</section>
+
+		<!-- Messages Section -->
+		<section class="messages-section">
+			<!-- Manchas de luz de fondo -->
+			<div class="ambient-light light-1"></div>
+			<div class="ambient-light light-2"></div>
+			<div class="ambient-light light-3"></div>
+
+			<!-- Corazones brillantes flotantes en messages -->
+			<div class="hearts-container messages-hearts">
+				<svg class="heart heart-1" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-2" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-3" viewBox="0 0 24 24" fill="#FFC0CB">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-4" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-5" viewBox="0 0 24 24" fill="#FFAEC9">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-6" viewBox="0 0 24 24" fill="#FFC0CB">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+			</div>
+			
+			<!-- Estrellas brillantes flotantes en messages -->
+			<div class="stars-container messages-stars">
+				<svg class="star star-1" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-2" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-3" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-4" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-5" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-6" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-7" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+			</div>
+
+			<div class="messages-container">
+				<h2 class="section-title">Por qué te amo</h2>
+				
+				<!-- Swiper Slider -->
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<!-- Card 1 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">Tu Fortaleza</h3>
+								<p class="card-text">"Amo que, aunque a veces el mundo te asusta y la ansiedad ataca, sigues aquí, luchando. Eres más fuerte de lo que crees."</p>
+							</div>
+						</div>
+
+						<!-- Card 2 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">Tu Paciencia</h3>
+								<p class="card-text">"Amar a distancia no es para cualquiera. Gracias por esperarme, por aguantar los kilómetros y por ser mi paz cuando mi propia mente es un caos."</p>
+							</div>
+						</div>
+
+						<!-- Card 3 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">Mi Apoyo Incondicional</h3>
+								<p class="card-text">"Cuando estoy estresado, saber que existes y estas en mi vida me calma. Eres mi motivo para querer construir un futuro mejor."</p>
+							</div>
+						</div>
+
+						<!-- Card 4 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">La forma en que me ves</h3>
+								<p class="card-text">"A pesar de mis inseguridades, tú me haces sentir suficiente."</p>
+							</div>
+						</div>
+
+						<!-- Card 5 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">El Futuro</h3>
+								<p class="card-text">"Porque cada kilómetro que nos separa hoy, será una anécdota de lo mucho que luchamos para estar juntos mañana."</p>
+							</div>
+						</div>
+
+						<!-- Card 6 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">Eres Arte</h3>
+								<p class="card-text">"Podría pasar horas viendo tus fotos y no me cansaría. Tienes una belleza que no solo me atrae, sino que me da paz. Para mis ojos, eres simplemente perfecta."</p>
+							</div>
+						</div>
+
+						<!-- Card 7 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">Tu Humor Único</h3>
+								<p class="card-text">"Amo tus ocurrencias, aunque a veces raras, eso te hace única. Tienes la capacidad de hacerme reír incluso cuando he tenido un día pesado."</p>
+							</div>
+						</div>
+
+						<!-- Card 8 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">Tu Corazón</h3>
+								<p class="card-text">"Mucha gente ve tu exterior, pero yo tengo la suerte de conocer lo que guardas dentro. Sé que tienes un gran corazón y tienes mucho amor para dar. Gracias por dejarme entrar y quedarme ahí."</p>
+							</div>
+						</div>
+
+						<!-- Card 9 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">Tu Magia</h3>
+								<p class="card-text">"No sé cómo lo haces, pero tienes "algo" que me atrapó desde el primer día. Haces que el mundo parezca un lugar más bonito solo por estar en él."</p>
+							</div>
+						</div>
+
+						<!-- Card 10 -->
+						<div class="swiper-slide">
+							<div class="message-card">
+								<h3 class="card-title">Simplemente Tú</h3>
+							<p class="card-text">"No necesito que seas diferente, ni que cambies nada. Con tus días buenos, tus días malos, tus gustos y tus manías... te elijo a ti, todos los días."</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Paginación -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Letter Section -->
+		<section class="letter-section">
+			<!-- Corazones brillantes flotantes en letter -->
+			<div class="hearts-container letter-hearts">
+				<svg class="heart heart-1" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-2" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-3" viewBox="0 0 24 24" fill="#FFC0CB">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-4" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-5" viewBox="0 0 24 24" fill="#FFAEC9">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+			</div>
+			
+			<!-- Estrellas brillantes flotantes en letter -->
+			<div class="stars-container letter-stars">
+				<svg class="star star-1" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-2" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-3" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-4" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-5" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+			</div>
+
+			<div class="letter-container">
+				<div class="letter-paper-card">
+					<div class="letter-decorative-heart letter-heart-top-left">
+						<svg viewBox="0 0 24 24" fill="#FF6B9D">
+							<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+						</svg>
+					</div>
+					<div class="letter-decorative-heart letter-heart-bottom-right">
+						<svg viewBox="0 0 24 24" fill="#FF6B9D">
+							<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+						</svg>
+					</div>
+					
+					<div class="letter-content" id="letterContent">
+						<h2 class="letter-title fade-line">Amor,</h2>
+						<p class="letter-text fade-line">A veces me pongo a pensar en cómo comenzó todo. Sé que nos conocimos a través de una pantalla y que quizás sí, pedirte que fueras mi novia pudo parecer apresurado. Pero te digo que, no me arrepiento de nada. En ese momento sentí que tenía que decírtelo, que me gustas, que necesitaba estar contigo.</p>
+						
+						<p class="letter-text fade-line">Poco a poco te fuiste convirtiendo en alguien indispensable para mí, en alguien muy especial e importante. Me fui enamorando de tu forma de ser, de cada detalle tuyo, de todo lo que eres.</p>
+						
+						<p class="letter-text fade-line">Ya llevamos poco más de un año, y aunque la distancia a veces duele, creo que nos ha enseñado muchas cosas. Hemos tenido nuestros momentos bajos, esos días en los que no nos entendemos, pero aun así hemos sobresalido de esas situaciones y siempre tratando de mejorar uno por el otro. Has estado ahí para celebrar conmigo cuando conseguí mi primer trabajo, y fuiste mi refugio cuando reprobé mi primer curso en la universidad. Eso, para mí, vale más que cualquier cosa.</p>
+						
+						<p class="letter-text fade-line">Estamos aprendiendo a sobrellevar lo difícil y a crecer juntos. Y aunque a veces nos cueste, vamos a estar bien. Y tienes razón, siempre lo estamos.</p>
+						
+						<p class="letter-text fade-line">Estoy feliz y agradecido de tenerte en mi vida. Te amo. De verdad, no encuentro otra manera más fuerte de decírtelo, te amo demasiado.</p>
+						
+						<p class="letter-text fade-line">Espero que este pequeño detalle te guste tanto como a mí me gustó hacerlo pensando en ti. Y antes de terminar, quiero dedicarte la siguiente canción porque ahora cada vez que la escucho, no puedo evitar pensar en ti.</p>
+						
+						<p class="letter-signature fade-line">Con todo mi amor 
+							<svg class="signature-heart" viewBox="0 0 24 24" fill="#AD78EA" style="width: 1.5em; height: 1.5em; display: inline-block; vertical-align: middle;">
+								<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+							</svg>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Music Player Section -->
+		<section class="music-section">
+			<!-- Corazones brillantes flotantes en music -->
+			<div class="hearts-container music-hearts">
+				<svg class="heart heart-1" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-2" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-3" viewBox="0 0 24 24" fill="#FFC0CB">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-4" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-5" viewBox="0 0 24 24" fill="#FFAEC9">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+			</div>
+			
+			<!-- Estrellas brillantes flotantes en music -->
+			<div class="stars-container music-stars">
+				<svg class="star star-1" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-2" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-3" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-4" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-5" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+			</div>
+
+			<div class="music-container">
+				<h2 class="music-title">Una canción para ti</h2>
+				
+				<div class="player-wrapper">
+					<!-- Album Cover -->
+					<div class="album-cover">
+						<img src="/portada-entombed.jpg" alt="Deftones - Entombed" class="cover-image">
+					</div>
+					
+					<!-- Song Info -->
+					<div class="song-info">
+						<h3 class="song-title">Entombed</h3>
+						<p class="song-artist">Deftones</p>
+					</div>
+
+					<!-- Audio Player Controls -->
+					<div class="player-controls">
+						<audio id="audioPlayer" preload="metadata">
+							<source src="/Deftones - Entombed.mp3" type="audio/mpeg">
+						</audio>
+						
+						<button class="play-button" id="playButton">
+							<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+								<path d="M8 5v14l11-7z"/>
+							</svg>
+							<svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+								<path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+							</svg>
+						</button>
+						
+						<div class="progress-container">
+							<div class="time-display">
+								<span id="currentTime">0:00</span>
+								<span id="duration">0:00</span>
+							</div>
+							<div class="progress-bar" id="progressBar">
+								<div class="progress-fill" id="progressFill"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Lyrics Display -->
+					<div class="lyrics-container" id="lyricsContainer">
+						{entombedLyrics.map((lyric, index) => (
+							<div class="lyric-line" data-time={lyric.time} data-index={index}>
+								<p class="lyric-en">{lyric.en}</p>
+								<p class="lyric-es">{lyric.es}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script is:inline>
+			window.addEventListener('load', function() {
+				if (typeof Swiper !== 'undefined') {
+					var swiper = new Swiper(".mySwiper", {
+						effect: "coverflow",
+						grabCursor: true,
+						centeredSlides: true,
+						slidesPerView: "auto",
+						loop: false,
+						coverflowEffect: {
+							rotate: 0,
+							stretch: 0,
+							depth: 150,
+							modifier: 1.5,
+							slideShadows: false,
+						},
+						pagination: {
+							el: ".swiper-pagination",
+							clickable: true,
+							dynamicBullets: true,
+						},
+						breakpoints: {
+							320: {
+								coverflowEffect: {
+									depth: 100,
+									modifier: 1,
+								},
+							},
+							768: {
+								coverflowEffect: {
+									depth: 150,
+									modifier: 1.5,
+								},
+							},
+							1024: {
+								coverflowEffect: {
+									depth: 200,
+									modifier: 1.5,
+								},
+							},
+						},
+					});
+				}
+			});
+		</script>
+
+		<!-- Script para la animación de aparición progresiva de la carta -->
+		<script is:inline>
+			window.addEventListener('load', function() {
+				const fadeLines = document.querySelectorAll('.fade-line');
+				
+				// Intersection Observer para detectar cuando la sección es visible
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							// Cuando la sección entra en viewport, activar animación
+							fadeLines.forEach((line, index) => {
+								setTimeout(() => {
+									line.classList.add('visible');
+								}, index * 300); // Delay progresivo de 300ms entre cada línea
+							});
+							// Dejar de observar después de activar
+							observer.unobserve(entry.target);
+						}
+					});
+				}, {
+					threshold: 0.2 // Activar cuando el 20% de la sección sea visible
+				});
+				
+				// Observar la sección de la carta
+				const letterSection = document.querySelector('.letter-section');
+				if (letterSection) {
+					observer.observe(letterSection);
+				}
+			});
+		</script>
+
+		<!-- Script para el reproductor de música -->
+		<script is:inline>
+			window.addEventListener('load', function() {
+				const audio = document.getElementById('audioPlayer');
+				const playButton = document.getElementById('playButton');
+				const playIcon = document.querySelector('.play-icon');
+				const pauseIcon = document.querySelector('.pause-icon');
+				const progressBar = document.getElementById('progressBar');
+				const progressFill = document.getElementById('progressFill');
+				const currentTimeEl = document.getElementById('currentTime');
+				const durationEl = document.getElementById('duration');
+				const lyricsContainer = document.getElementById('lyricsContainer');
+				const lyricLines = document.querySelectorAll('.lyric-line');
+				
+				let currentLyricIndex = -1;
+				
+				// Play/Pause toggle
+				playButton.addEventListener('click', function() {
+					if (audio.paused) {
+						audio.play().then(function() {
+							playIcon.style.display = 'none';
+							pauseIcon.style.display = 'block';
+							playButton.classList.add('playing');
+						}).catch(function(error) {
+							console.error('Error al reproducir audio:', error);
+							alert('No se pudo reproducir el audio. Por favor, verifica que el archivo existe.');
+						});
+					} else {
+						audio.pause();
+						playIcon.style.display = 'block';
+						pauseIcon.style.display = 'none';
+						playButton.classList.remove('playing');
+					}
+				});
+				
+				// Update duration when loaded
+				audio.addEventListener('loadedmetadata', function() {
+				if (audio.duration && !isNaN(audio.duration) && isFinite(audio.duration)) {
+					durationEl.textContent = formatTime(audio.duration);
+				}
+			});
+			
+			// Fallback for duration
+			audio.addEventListener('canplay', function() {
+				if (durationEl.textContent === '0:00' && audio.duration && !isNaN(audio.duration) && isFinite(audio.duration)) {
+					durationEl.textContent = formatTime(audio.duration);
+				}
+			});
+			
+			audio.addEventListener('durationchange', function() {
+				if (audio.duration && !isNaN(audio.duration) && isFinite(audio.duration)) {
+					durationEl.textContent = formatTime(audio.duration);
+				}
+			});
+			
+			// Force load metadata
+			audio.load();
+				audio.addEventListener('timeupdate', function() {
+					const progress = (audio.currentTime / audio.duration) * 100;
+					progressFill.style.width = progress + '%';
+					currentTimeEl.textContent = formatTime(audio.currentTime);
+					
+					// Sync lyrics
+					updateLyrics(audio.currentTime);
+				});
+				
+				// Click on progress bar to seek
+				progressBar.addEventListener('click', function(e) {
+					const rect = progressBar.getBoundingClientRect();
+					const percent = (e.clientX - rect.left) / rect.width;
+					audio.currentTime = percent * audio.duration;
+				});
+				
+				// Format time helper
+				function formatTime(seconds) {
+					const mins = Math.floor(seconds / 60);
+					const secs = Math.floor(seconds % 60);
+					return mins + ':' + (secs < 10 ? '0' : '') + secs;
+				}
+				
+				// Update active lyric
+				function updateLyrics(currentTime) {
+					for (let i = lyricLines.length - 1; i >= 0; i--) {
+						const lyricTime = parseFloat(lyricLines[i].dataset.time);
+						if (currentTime >= lyricTime) {
+							if (currentLyricIndex !== i) {
+								// Remove active from all
+								lyricLines.forEach(line => line.classList.remove('active'));
+								// Add active to current
+								lyricLines[i].classList.add('active');
+								currentLyricIndex = i;
+								
+								// Scroll to active lyric only if playing
+								if (!audio.paused) {
+									lyricLines[i].scrollIntoView({
+										behavior: 'smooth',
+										block: 'center'
+									});
+								}
+							}
+							break;
+						}
+					}
+				}
+				
+				// Click on lyric to seek to that time
+				lyricLines.forEach(function(line) {
+					line.addEventListener('click', function() {
+						const lyricTime = parseFloat(line.dataset.time);
+						audio.currentTime = lyricTime;
+						// Auto-play if paused
+						if (audio.paused) {
+							audio.play().then(function() {
+								playIcon.style.display = 'none';
+								pauseIcon.style.display = 'block';
+								playButton.classList.add('playing');
+							}).catch(function(error) {
+								console.log('Error al reproducir:', error);
+							});
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

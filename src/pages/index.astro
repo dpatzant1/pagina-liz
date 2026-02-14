@@ -12,7 +12,7 @@ import { entombedLyrics } from '../data/lyrics.js';
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<title>Para ti, mi amor ❤️</title>
 	</head>
@@ -91,7 +91,28 @@ import { entombedLyrics } from '../data/lyrics.js';
 			<div class="hero-content">
 				<h1 class="hero-title">Feliz San Valentín, amor de mi vida.</h1>
 				<p class="hero-subtitle">He creado este pequeño rincón en internet solo para ti.</p>
-				<button class="hero-button" onclick="document.querySelector('.messages-section').scrollIntoView({behavior: 'smooth'})">Descubrir ↓</button>
+				<div class="button-container">
+					<button class="discover-button" onclick="document.querySelector('.messages-section').scrollIntoView({behavior: 'smooth'})">
+						<span class="button-glow"></span>
+						<span class="button-content">
+							<svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z" stroke="currentColor" stroke-width="2"/>
+								<path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+								<circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+							</svg>
+							<span class="button-text">Descubrir tu regalo</span>
+							<svg class="button-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 5L12 19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</span>
+						<span class="button-particles">
+							<span class="particle particle-1">✦</span>
+							<span class="particle particle-2">✧</span>
+							<span class="particle particle-3">❤</span>
+							<span class="particle particle-4">✦</span>
+						</span>
+					</button>
+				</div>
 			</div>
 		</section>
 
@@ -159,7 +180,7 @@ import { entombedLyrics } from '../data/lyrics.js';
 						<div class="swiper-slide">
 							<div class="message-card">
 								<h3 class="card-title">Tu Fortaleza</h3>
-								<p class="card-text">"Amo que, aunque a veces el mundo te asusta y la ansiedad ataca, sigues aquí, luchando. Eres más fuerte de lo que crees."</p>
+								<p class="card-text">"Amo que, aunque a veces el mundo te asusta, tienes ansiedad, pena o miedo, sigues aquí, luchando y siguiendo adelante. Eres más fuerte de lo que crees."</p>
 							</div>
 						</div>
 
@@ -167,31 +188,31 @@ import { entombedLyrics } from '../data/lyrics.js';
 						<div class="swiper-slide">
 							<div class="message-card">
 								<h3 class="card-title">Tu Paciencia</h3>
-								<p class="card-text">"Amar a distancia no es para cualquiera. Gracias por esperarme, por aguantar los kilómetros y por ser mi paz cuando mi propia mente es un caos."</p>
+								<p class="card-text">"Sé que no es fácil la distancia. Gracias por esperarme, por aguantar los kilómetros que nos separan y por quererme todos los días a pesar de todo."</p>
 							</div>
 						</div>
 
 						<!-- Card 3 -->
 						<div class="swiper-slide">
 							<div class="message-card">
-								<h3 class="card-title">Mi Apoyo Incondicional</h3>
-								<p class="card-text">"Cuando estoy estresado, saber que existes y estas en mi vida me calma. Eres mi motivo para querer construir un futuro mejor."</p>
+								<h3 class="card-title">Mi Lugar Seguro</h3>
+								<p class="card-text">"En medio del estrés o ansiedad, eres esa persona que logra transmitirme paz. Eres mi refugio."</p>
 							</div>
 						</div>
 
 						<!-- Card 4 -->
 						<div class="swiper-slide">
 							<div class="message-card">
-								<h3 class="card-title">La forma en que me ves</h3>
-								<p class="card-text">"A pesar de mis inseguridades, tú me haces sentir suficiente."</p>
+								<h3 class="card-title">Contigo puedo ser yo</h3>
+								<p class="card-text">"Tú me aceptas tal y como soy, sé que tengo que mejorar muchas cosas en mí, pero me aceptas con mis virtudes y con mis defectos. Contigo puedo ser completamente yo y eso lo agradezco profundamente."</p>
 							</div>
 						</div>
 
 						<!-- Card 5 -->
 						<div class="swiper-slide">
 							<div class="message-card">
-								<h3 class="card-title">El Futuro</h3>
-								<p class="card-text">"Porque cada kilómetro que nos separa hoy, será una anécdota de lo mucho que luchamos para estar juntos mañana."</p>
+								<h3 class="card-title">Haces que la espera valga la pena</h3>
+								<p class="card-text">"Amo que, a pesar de estar lejos, me haces sentir cerca de ti. Cuando imagino nuestro futuro juntos, me doy cuenta de que cada día separados habrá valido la pena, porque tú mi amor, lo vales todo"</p>
 							</div>
 						</div>
 
@@ -199,7 +220,7 @@ import { entombedLyrics } from '../data/lyrics.js';
 						<div class="swiper-slide">
 							<div class="message-card">
 								<h3 class="card-title">Eres Arte</h3>
-								<p class="card-text">"Podría pasar horas viendo tus fotos y no me cansaría. Tienes una belleza que no solo me atrae, sino que me da paz. Para mis ojos, eres simplemente perfecta."</p>
+								<p class="card-text">"Podría pasar horas viendote y no me cansaría. Eres simplemente perfecta. Cada vez que te miro, me quedo enbobado, tienes una belleza única y me encanta."</p>
 							</div>
 						</div>
 
@@ -207,7 +228,7 @@ import { entombedLyrics } from '../data/lyrics.js';
 						<div class="swiper-slide">
 							<div class="message-card">
 								<h3 class="card-title">Tu Humor Único</h3>
-								<p class="card-text">"Amo tus ocurrencias, aunque a veces raras, eso te hace única. Tienes la capacidad de hacerme reír incluso cuando he tenido un día pesado."</p>
+								<p class="card-text">"Amo tus ocurrencias, aunque a veces raras, eso te hace única. Tienes la capacidad de hacerme reír incluso cuando he tenido un mal día."</p>
 							</div>
 						</div>
 
@@ -215,7 +236,7 @@ import { entombedLyrics } from '../data/lyrics.js';
 						<div class="swiper-slide">
 							<div class="message-card">
 								<h3 class="card-title">Tu Corazón</h3>
-								<p class="card-text">"Mucha gente ve tu exterior, pero yo tengo la suerte de conocer lo que guardas dentro. Sé que tienes un gran corazón y tienes mucho amor para dar. Gracias por dejarme entrar y quedarme ahí."</p>
+								<p class="card-text">"No es solo que me encantes por fuera. Es que de verdad admiro la persona que eres. A veces intentas hacerte la fuerte, pero yo sé todo el cariño, la empatía y la bondad que guardas en tu corazón. Eres una persona genuinamente buena."</p>
 							</div>
 						</div>
 
@@ -223,7 +244,7 @@ import { entombedLyrics } from '../data/lyrics.js';
 						<div class="swiper-slide">
 							<div class="message-card">
 								<h3 class="card-title">Tu Magia</h3>
-								<p class="card-text">"No sé cómo lo haces, pero tienes "algo" que me atrapó desde el primer día. Haces que el mundo parezca un lugar más bonito solo por estar en él."</p>
+								<p class="card-text">"No sé como explicarlo, pero tienes algo que me atrapó desde el principio y sigue estando presente. No puedo evitar sonreir en cada mensaje que me mandas. Tienes algo especial que me enamora todos los días."</p>
 							</div>
 						</div>
 
@@ -231,7 +252,7 @@ import { entombedLyrics } from '../data/lyrics.js';
 						<div class="swiper-slide">
 							<div class="message-card">
 								<h3 class="card-title">Simplemente Tú</h3>
-							<p class="card-text">"No necesito que seas diferente, ni que cambies nada. Con tus días buenos, tus días malos, tus gustos y tus manías... te elijo a ti, todos los días."</p>
+							<p class="card-text">"Eres perfecta tal y como eres, no quiero que seas diferente. Yo te elijo a ti, todos los días, te quiero a ti, todos los días y te amo a ti, todos los días. Gracias por ser tú."</p>
 							</div>
 						</div>
 					</div>
@@ -301,11 +322,11 @@ import { entombedLyrics } from '../data/lyrics.js';
 						
 						<p class="letter-text fade-line">Poco a poco te fuiste convirtiendo en alguien indispensable para mí, en alguien muy especial e importante. Me fui enamorando de tu forma de ser, de cada detalle tuyo, de todo lo que eres.</p>
 						
-						<p class="letter-text fade-line">Ya llevamos poco más de un año, y aunque la distancia a veces duele, creo que nos ha enseñado muchas cosas. Hemos tenido nuestros momentos bajos, esos días en los que no nos entendemos, pero aun así hemos sobresalido de esas situaciones y siempre tratando de mejorar uno por el otro. Has estado ahí para celebrar conmigo cuando conseguí mi primer trabajo, y fuiste mi refugio cuando reprobé mi primer curso en la universidad. Eso, para mí, vale más que cualquier cosa.</p>
+						<p class="letter-text fade-line">Ya llevamos poco más de un año, y aunque la distancia a veces duele, creo que nos ha enseñado muchas cosas. Hemos tenido nuestros momentos "malos", esos días en los que no nos entendemos, pero aun así estamos aquí, hemos sobresalido de esas situaciones y siempre tratando de mejorar uno por el otro. Has estado conmigo para celebrar los momentos buenos y apoyarme en los momentos difíciles. Eso, para mí, vale más que cualquier cosa.</p>
 						
-						<p class="letter-text fade-line">Estamos aprendiendo a sobrellevar lo difícil y a crecer juntos. Y aunque a veces nos cueste, vamos a estar bien. Y tienes razón, siempre lo estamos.</p>
+						<p class="letter-text fade-line">Estamos aprendiendo a sobrellevar lo difícil y a crecer juntos, que como te digo, eso es lo importante. Y aunque a veces nos cueste, sé que vamos a estar bien, porque nos tenemos el uno al otro.</p>
 						
-						<p class="letter-text fade-line">Estoy feliz y agradecido de tenerte en mi vida. Te amo. De verdad, no encuentro otra manera más fuerte de decírtelo, te amo demasiado.</p>
+						<p class="letter-text fade-line">Estoy feliz y agradecido de tenerte en mi vida. De verdad, me siento el hombre más afortunado del mundo por eso. Te amo y no encuentro otra manera más fuerte de decírtelo, te amo demasiado.</p>
 						
 						<p class="letter-text fade-line">Espero que este pequeño detalle te guste tanto como a mí me gustó hacerlo pensando en ti. Y antes de terminar, quiero dedicarte la siguiente canción porque ahora cada vez que la escucho, no puedo evitar pensar en ti.</p>
 						

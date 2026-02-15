@@ -14,6 +14,7 @@ import { entombedLyrics } from '../data/lyrics.js';
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
 		<title>Para ti, mi amor ❤️</title>
 	</head>
 	<body>
@@ -263,6 +264,166 @@ import { entombedLyrics } from '../data/lyrics.js';
 			</div>
 		</section>
 
+		<!-- Counter Section -->
+		<section class="counter-section">
+			<!-- Manchas de luz de fondo -->
+			<div class="ambient-light light-1"></div>
+			<div class="ambient-light light-2"></div>
+			<div class="ambient-light light-3"></div>
+
+			<!-- Corazones brillantes flotantes en counter -->
+			<div class="hearts-container counter-hearts">
+				<svg class="heart heart-1" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-2" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-3" viewBox="0 0 24 24" fill="#FFC0CB">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-4" viewBox="0 0 24 24" fill="#FFB6C1">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-5" viewBox="0 0 24 24" fill="#FFAEC9">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+				<svg class="heart heart-6" viewBox="0 0 24 24" fill="#FFC0CB">
+					<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+				</svg>
+			</div>
+			
+			<!-- Estrellas brillantes flotantes en counter -->
+			<div class="stars-container counter-stars">
+				<svg class="star star-1" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-2" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-3" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-4" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-5" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-6" viewBox="0 0 24 24" fill="#FFFACD">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<svg class="star star-7" viewBox="0 0 24 24" fill="#FFE5B4">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+			</div>
+
+			<div class="counter-container">
+				<h2 class="section-title">Nuestro Tiempo Juntos</h2>
+				<p class="counter-subtitle">Desde el 3 de julio de 2024 a las 6:40 PM</p>
+				
+				<div class="time-grid">
+					<div class="time-card">
+						<div class="time-value" id="years">0</div>
+						<div class="time-label">Años</div>
+					</div>
+					<div class="time-card">
+						<div class="time-value" id="months">0</div>
+						<div class="time-label">Meses</div>
+					</div>
+					<div class="time-card">
+						<div class="time-value" id="days">0</div>
+						<div class="time-label">Días</div>
+					</div>
+					<div class="time-card">
+						<div class="time-value" id="hours">0</div>
+						<div class="time-label">Horas</div>
+					</div>
+					<div class="time-card">
+						<div class="time-value" id="minutes">0</div>
+						<div class="time-label">Minutos</div>
+					</div>
+					<div class="time-card">
+						<div class="time-value" id="seconds">0</div>
+						<div class="time-label">Segundos</div>
+					</div>
+				</div>
+
+				<!-- Gran total de días -->
+				<div class="total-days-container">
+					<div class="total-days-card">
+						<div class="total-days-icon">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="3" y="4" width="18" height="18" rx="2" stroke="#FF6B9D" stroke-width="2"/>
+								<path d="M16 2V6M8 2V6M3 10H21" stroke="#FF6B9D" stroke-width="2" stroke-linecap="round"/>
+								<circle cx="12" cy="15" r="1.5" fill="#AD78EA"/>
+								<circle cx="8" cy="15" r="1" fill="#90D5FF" opacity="0.7"/>
+								<circle cx="16" cy="15" r="1" fill="#90D5FF" opacity="0.7"/>
+							</svg>
+						</div>
+						<div class="total-days-content">
+							<div class="total-days-number" id="totalDays">0</div>
+							<div class="total-days-text">Días Juntos</div>
+						</div>
+						<div class="total-days-sparkles">
+							<span class="sparkle sparkle-1">✨</span>
+							<span class="sparkle sparkle-2">💫</span>
+							<span class="sparkle sparkle-3">✨</span>
+							<span class="sparkle sparkle-4">💫</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="counter-message">
+					<svg class="message-heart" viewBox="0 0 24 24" fill="#FF6B9D">
+						<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+					</svg>
+					<p>Cada segundo contigo es un regalo</p>
+					<svg class="message-heart" viewBox="0 0 24 24" fill="#FF6B9D">
+						<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+					</svg>
+				</div>
+			</div>
+		</section>
+
+		<!-- Heart Graph Section -->
+		<section class="heart-graph-section">
+			<!-- Manchas de luz de fondo -->
+			<div class="ambient-light light-1"></div>
+			<div class="ambient-light light-2"></div>
+			<div class="ambient-light light-3"></div>
+
+			<div class="heart-graph-container">
+				<h2 class="section-title">Corazón Oscilante</h2>
+				<p class="heart-graph-subtitle">Esta ecuación combina geometría algebraica con funciones trigonométricas. Se llama "corazón oscilante" porque la variable <em>a</em> controla la frecuencia de la función seno, haciendo que oscile cada vez más rápido. Cuando <em>a</em> aumenta, las oscilaciones se vuelven tan densas que rellenan visualmente toda el área del corazón.</p>
+				
+				<!-- Ecuación matemática -->
+				<div class="equation-container">
+					<div id="heart-equation"></div>
+				</div>
+
+				<!-- Canvas para la gráfica -->
+				<div class="canvas-wrapper">
+					<canvas id="heartCanvas" width="600" height="600"></canvas>
+				</div>
+
+				<!-- Slider control -->
+				<div class="slider-container">
+					<label for="aSlider" class="slider-label">Ajusta la variable <span class="variable-a">a</span></label>
+					<input type="range" id="aSlider" min="0" max="30" value="0" step="0.1" class="heart-slider">
+					<div class="slider-marks">
+						<span>0</span>
+						<span></span>
+						<span>∞</span>
+					</div>
+				</div>
+
+				<div class="heart-message">
+					<p>Porque mi amor por ti es infinito ❤️</p>
+				</div>
+			</div>
+		</section>
+
 		<!-- Letter Section -->
 		<section class="letter-section">
 			<!-- Corazones brillantes flotantes en letter -->
@@ -481,6 +642,73 @@ import { entombedLyrics } from '../data/lyrics.js';
 			});
 		</script>
 
+		<!-- Script para el contador de tiempo -->
+		<script is:inline>
+			window.addEventListener('load', function() {
+				// Fecha de inicio: 3 de julio de 2024 a las 6:40 PM (18:40)
+				// Nota: Los meses en JavaScript van de 0 (enero) a 11 (diciembre), por eso julio es 6
+				const startDate = new Date(2024, 6, 3, 18, 40, 0);
+				
+				function updateCounter() {
+					const now = new Date();
+					const diff = now - startDate;
+					
+					// Calcular el tiempo transcurrido
+					const totalSeconds = Math.floor(diff / 1000);
+					const totalMinutes = Math.floor(totalSeconds / 60);
+					const totalHours = Math.floor(totalMinutes / 60);
+					const totalDays = Math.floor(totalHours / 24);
+					
+					// Calcular años, meses y días restantes
+					let years = now.getFullYear() - startDate.getFullYear();
+					let months = now.getMonth() - startDate.getMonth();
+					let days = now.getDate() - startDate.getDate();
+					let hours = now.getHours() - startDate.getHours();
+					let minutes = now.getMinutes() - startDate.getMinutes();
+					let seconds = now.getSeconds() - startDate.getSeconds();
+					
+					// Ajustar si los valores son negativos
+					if (seconds < 0) {
+						seconds += 60;
+						minutes--;
+					}
+					if (minutes < 0) {
+						minutes += 60;
+						hours--;
+					}
+					if (hours < 0) {
+						hours += 24;
+						days--;
+					}
+					if (days < 0) {
+						// Obtener días del mes anterior
+						const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+						days += prevMonth.getDate();
+						months--;
+					}
+					if (months < 0) {
+						months += 12;
+						years--;
+					}
+					
+					// Actualizar los elementos HTML
+					document.getElementById('years').textContent = years;
+					document.getElementById('months').textContent = months;
+					document.getElementById('days').textContent = days;
+					document.getElementById('hours').textContent = hours;
+					document.getElementById('minutes').textContent = minutes;
+					document.getElementById('seconds').textContent = seconds;
+					
+					// Actualizar el gran total de días
+					document.getElementById('totalDays').textContent = totalDays.toLocaleString('es-ES');
+				}
+				
+				// Actualizar inmediatamente y luego cada segundo
+				updateCounter();
+				setInterval(updateCounter, 1000);
+			});
+		</script>
+
 		<!-- Script para la animación de aparición progresiva de la carta -->
 		<script is:inline>
 			window.addEventListener('load', function() {
@@ -509,6 +737,128 @@ import { entombedLyrics } from '../data/lyrics.js';
 				if (letterSection) {
 					observer.observe(letterSection);
 				}
+			});
+		</script>
+
+		<!-- Script para KaTeX y el corazón oscilante -->
+		<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+		<script is:inline>
+			window.addEventListener('load', function() {
+				// Renderizar la ecuación con KaTeX
+				const equationElement = document.getElementById('heart-equation');
+				if (equationElement && typeof katex !== 'undefined') {
+					katex.render('y = x^{\\frac{2}{3}} + \\frac{2}{3}(\\pi - x^2)^{\\frac{1}{2}} \\cdot \\sin(a \\cdot \\pi \\cdot x)', equationElement, {
+						displayMode: true,
+						throwOnError: false
+					});
+				}
+
+				// Configuración del canvas y la gráfica
+				const canvas = document.getElementById('heartCanvas');
+				const slider = document.getElementById('aSlider');
+				
+				if (!canvas || !slider) return;
+
+				const ctx = canvas.getContext('2d');
+				const width = canvas.width;
+				const height = canvas.height;
+				
+				// Función para graficar el corazón
+				function drawHeart(a) {
+					// Limpiar canvas
+					ctx.fillStyle = '#0a0a0a';
+					ctx.fillRect(0, 0, width, height);
+					
+					// Configurar el sistema de coordenadas (ajustado para zoom y centrado)
+					const scale = 130; // pixels por unidad (aumentado para hacer zoom)
+					const centerX = width / 2;
+					const centerY = height / 2 + 20; // Centrado verticalmente con ligero ajuste
+					
+					// Dibujar ejes (sutiles)
+					ctx.strokeStyle = 'rgba(255, 107, 157, 0.2)';
+					ctx.lineWidth = 1;
+					ctx.beginPath();
+					// Eje X
+					ctx.moveTo(0, centerY);
+					ctx.lineTo(width, centerY);
+					// Eje Y
+					ctx.moveTo(centerX, 0);
+					ctx.lineTo(centerX, height);
+					ctx.stroke();
+					
+					// Dibujar la curva del corazón
+					ctx.strokeStyle = '#FF6B9D';
+					ctx.lineWidth = 2;
+					ctx.beginPath();
+					
+					// Límites del dominio: x va de -sqrt(π) a sqrt(π)
+					const xMin = -Math.sqrt(Math.PI);
+					const xMax = Math.sqrt(Math.PI);
+					const step = 0.001; // Paso pequeño para suavidad
+					
+					let firstPoint = true;
+					
+					for (let x = xMin; x <= xMax; x += step) {
+						// Ecuación del corazón oscilante con corrección para x negativas
+						// y = |x|^(2/3) + (2/3) * sqrt(π - x²) * sin(a * π * x)
+						const term1 = Math.pow(Math.abs(x), 2/3);
+						const sqrtTerm = Math.sqrt(Math.PI - x*x);
+						const term2 = (2/3) * sqrtTerm * Math.sin(a * Math.PI * x);
+						const y = term1 + term2;
+						
+						// Convertir a coordenadas del canvas
+						const canvasX = centerX + x * scale;
+						const canvasY = centerY - y * scale; // Invertir Y porque canvas crece hacia abajo
+						
+						if (firstPoint) {
+							ctx.moveTo(canvasX, canvasY);
+							firstPoint = false;
+						} else {
+							ctx.lineTo(canvasX, canvasY);
+						}
+					}
+					
+					ctx.stroke();
+					
+					// Agregar brillo al corazón cuando a es alto
+					if (a > 30) {
+						ctx.shadowBlur = 20;
+						ctx.shadowColor = '#FF6B9D';
+						
+						// Redibujar con brillo
+						ctx.beginPath();
+						firstPoint = true;
+						
+						for (let x = xMin; x <= xMax; x += step) {
+							const term1 = Math.pow(Math.abs(x), 2/3);
+							const sqrtTerm = Math.sqrt(Math.PI - x*x);
+							const term2 = (2/3) * sqrtTerm * Math.sin(a * Math.PI * x);
+							const y = term1 + term2;
+							
+							const canvasX = centerX + x * scale;
+							const canvasY = centerY - y * scale;
+							
+							if (firstPoint) {
+								ctx.moveTo(canvasX, canvasY);
+								firstPoint = false;
+							} else {
+								ctx.lineTo(canvasX, canvasY);
+							}
+						}
+						
+						ctx.stroke();
+						ctx.shadowBlur = 0;
+					}
+				}
+				
+				// Event listener para el slider
+				slider.addEventListener('input', function() {
+					const a = parseFloat(this.value);
+					drawHeart(a);
+				});
+				
+				// Dibujar el corazón inicial con a = 0
+				drawHeart(0);
 			});
 		</script>
 
